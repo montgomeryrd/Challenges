@@ -15,3 +15,13 @@ module.exports = function addedChar(s1, s2){
   }
   return string2[0]
 }
+
+//Alternative Solution
+function addedChar(s1, s2) {
+  let code = 0;
+
+  for (let i = 0; i < s2.length; i += 1)
+      code += s2.charCodeAt(i) - ~~s1.charCodeAt(i);
+
+  return String.fromCharCode(code / 3);
+}
