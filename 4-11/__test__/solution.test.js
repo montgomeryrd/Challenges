@@ -5,14 +5,23 @@ require('jest');
 
 describe('Solution', () => {
     
-    describe('Valid Input', () => {
+    describe('Invalid Input', () => {
         
         let n1 = 0;
 
-        it('should return a message', () => {
-            expect(Solution(n1)).toEqual('The value of "n" must be greater than 0');
+        it('should return NaN', () => {
+            expect(Solution(n1)).toEqual('NaN');
         });
 
+        let n6 = 'pocket sandwich';
+
+        it('should return NaN', () => {
+            expect(Solution(n6)).toEqual('NaN');
+        });
+    });
+
+    describe('Valid Input', () => {
+        
         let n2 = 1;
 
         it('should return Champernowne\'s Digit: 0', () => {
