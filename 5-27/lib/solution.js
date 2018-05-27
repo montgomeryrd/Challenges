@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = function highestRank(arr) {
+
     let count = 0;
     let rank = 0;
     let highest = 0;
@@ -17,5 +18,5 @@ module.exports = function highestRank(arr) {
         }
         count = 0;
     }
-    return curr;
+    return rank;
 }

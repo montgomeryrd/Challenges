@@ -5,45 +5,24 @@ require('jest');
 
 describe('Solution', () => {
     
-    describe('Invalid Input', () => {
-        
-        let n1 = 0;
-
-        it('should return NaN', () => {
-            expect(Solution(n1)).toEqual('NaN');
-        });
-
-        let n6 = 'pocket sandwich';
-
-        it('should return NaN', () => {
-            expect(Solution(n6)).toEqual('NaN');
-        });
-    });
-
     describe('Valid Input', () => {
         
-        let n2 = 1;
+        let arr1 = [12, 10, 8, 12, 7, 6, 4, 10, 12];
 
         it('should return Champernowne\'s Digit: 0', () => {
-            expect(Solution(n2)).toEqual(0);
+            expect(Solution(arr1)).toEqual(12);
         });
 
-        let n3 = 20;
+        let arr2 = [12, 10, 8, 12, 7, 6, 4, 10, 12, 10];
 
         it('should return Champernowne\'s Digit: 4', () => {
-            expect(Solution(n3)).toEqual(4);
+            expect(Solution(arr2)).toEqual(12);
         });
 
-        let n4 = 345;
+        let arr3 = [12, 10, 8, 8, 3, 3, 3, 3, 2, 4, 10, 12, 10];
 
         it('should return Champernowne\'s Digit: 5', () => {
-            expect(Solution(n4)).toEqual(5);
-        });
-
-        let n5 = 45678;
-
-        it('should return Champernowne\'s Digit: 3', () => {
-            expect(Solution(n5)).toEqual(3);
+            expect(Solution(arr3)).toEqual(3);
         });
     });
 });
