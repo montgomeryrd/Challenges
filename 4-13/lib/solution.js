@@ -1,17 +1,23 @@
 'use strict';
 
-module.exports = function champernowneDigit(n) {
-  let champernowne = [];
-  let count = 0;
+module.exports = function nthSmallest(arr, n) {
+  arr.sort(function(a,b) {
+    return a - b;
+  })
   
-  if(n === 0 || typeof n !== 'number') return 'NaN'
-  
-  while(count !== n) {
-    champernowne.push(count);
-    count++;
-  }
-  
-  champernowne = champernowne.join('').split('');
-  return parseInt(champernowne[n - 1]);
-};
+  let array = arr.filter(function(element, position) {
+    return arr.indexOf(element) == position;
+  })
 
+  if(n > array.length) {
+    return null;
+  } else {
+    return array[n - 1];
+  }
+}
+
+//A Better Solution:
+
+// function nthSmallest(arr, n) {
+//   return Array.from(new Set(arr)).sort((a, b) => a - b)[n - 1] || null;
+// }

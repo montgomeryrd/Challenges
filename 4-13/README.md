@@ -1,28 +1,17 @@
 <h1>Challenge</h1>
-<h2>Champernowne's Championship</h2>
+<h2>The nth Smallest Integer</h2>
 
-Ho ho! So you think you know integers, do you? Well then, young wizard, tell us what the Nth digit of the Champernowne constant is!
+Given a list of integers, return the nth smallest integer in the list. Only distinct elements should be considered when calculating the answer. n will always be positive (n > 0)
 
-The constant proceeds like this: 
+If the nth small integer doesn't exist, return -1 (C++) / None (Python) / nil (Ruby).
+
+Notes:
+
+"indexing" starts from 1
+huge lists (of 1 million elements) will be tested
+Examples
 ```
-0.12345678910111213141516...
+small({1, 3, 4, 5}, 7)       -> null  // n is more than the size of the list
+small({4, 3, 4, 5}, 4)       -> null  // 4th smallest integer doesn't exist
+small({45, -10, 4, 5, 4}, 4) -> 45  // 4th smallest integer is 45
 ```
-I hope you see the pattern!
-
-Conjure a function that will accept an integer, n, and return the (one-indexed) nth digit of Champernowne's constant. Can you get it to run in constant time?
-
-For example:
-```
-n = 1 should return 0 (the very first digit)
-
-n = 2 should return 1 (we ignore the period character since it's not a digit!)
-
-n = 20 should return 4 (that's the 4 in the number 14, 20th in sequence)
-```
-For any invalid values, such as 0 and below, or non-integers, return... NaN!
-
-I hope (for your sake) that you've been practicing your mathemagical spells, because a naïve solution will not be fast enough to compete in this championship!
-
-Invoke with precision, and be wary of rounding errors in the realms of enormity!
-
-May the best integer win!
