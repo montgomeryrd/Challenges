@@ -9,11 +9,7 @@ module.exports = function nthSmallest(arr, n) {
     return arr.indexOf(element) == position;
   })
 
-  if(n > array.length) {
-    return null;
-  } else {
-    return array[n - 1];
-  }
+  return (n > array.length) ? null : array[n - 1];
 }
 
 //A Better Solution:
