@@ -1,0 +1,21 @@
+{
+  "name": "6-5",
+  "version": "1.0.0",
+  "description": "code challenge",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest -i"
+  },
+  "repository": {
+    "type": "git",
+    "url": "montgomeryrd"
+  },
+  "author": "Richard Montgomery",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^23.1.0"
+  }
+}
