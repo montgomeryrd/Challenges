@@ -26,7 +26,7 @@ module.exports = function createReport(name){
         
         if(current.length === 3) {
             bird = current[0].split('');
-            if(bird.length <= 3) {
+            if(bird.length < 3) {
                 birdName = '';
                 while(bird.length > 0) {
                     birdName = `${birdName}${bird[0]}`
@@ -41,7 +41,7 @@ module.exports = function createReport(name){
             }
 
             bird = current[1].split('');
-            if(bird.length <= 3) {
+            if(bird.length < 3) {
                 birdName = '';
                 while(bird.length > 0) {
                     birdName = `${birdName}${bird[0]}`
@@ -49,6 +49,7 @@ module.exports = function createReport(name){
                 }
                 birdName = birdName.toUpperCase();
                 tempName = `${tempName}${birdName}`;
+                answer.push(tempName, parseInt(current[2]));
             } else {
                 birdName = `${bird[0]}${bird[1]}${bird[2]}`;
                 birdName = birdName.toUpperCase();
