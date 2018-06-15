@@ -14,3 +14,9 @@ module.exports = function digital_root(n) {
     }
     return n;
 }
+
+//Better:
+
+// function digital_root(n) {
+//     return (n - 1) % 9 + 1;
+// }
