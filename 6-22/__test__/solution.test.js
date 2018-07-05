@@ -5,33 +5,33 @@ require('jest');
 
 describe('Solution', () => {
 
-    let happy1 = [':)' , ':o)' , ';-)' , ';~)' , ':)' , ';)' , ';)'];
+    let arr1 = [3,2,6,8,2,3];
 
-    it('should count all the variations of allowed smiley faces', () => {
-        expect(Solution(happy1)).toEqual(6);
+    it('should sort the array from the highest values to the lowest, filter out duplicates, and return the greatest triplet sum', () => {
+        expect(Solution(arr1)).toEqual(17);
     });
 
-    let happy2 = [';D' , ';~)' , ':)' , ':(' , ':>' , ':>' , ';~>'];
+    let arr2 = [2,9,13,10,5,2,9,5];
 
-    it('should count all the variations of allowed smiley faces', () => {
-        expect(Solution(happy2)).toEqual(3);
+    it('should sort the array from the highest values to the lowest, filter out duplicates, and return the greatest triplet sum', () => {
+        expect(Solution(arr2)).toEqual(32);
     });
 
-    let happy3 = [':o>' , ':~(' , ':~)' , ':o(' , ';)' , ':o(' , ';('];
+    let arr3 = [2,1,8,0,6,4,8,6,2,4];
 
-    it('should count all the variations of allowed smiley faces', () => {
-        expect(Solution(happy3)).toEqual(2);
+    it('should sort the array from the highest values to the lowest, filter out duplicates, and return the greatest triplet sum', () => {
+        expect(Solution(arr3)).toEqual(18);
     });
 
-    let happy4 = [':~>' , ':->' , ';->' , ';o(' , ';>' , ';~)' , ':('];
+    let arr4 = [-3,-27,-4,-2,-27,-2];
 
-    it('should count all the variations of allowed smiley faces', () => {
-        expect(Solution(happy4)).toEqual(1);
+    it('should sort the array from the highest values to the lowest, filter out duplicates, and return the greatest triplet sum', () => {
+        expect(Solution(arr4)).toEqual(-9);
     });
 
-    let happy5 = [';(' , ';>' , ';>' , ';o>' , ';D' , ';oD' , ';D'];
+    let arr5 = [-14,-12,-7,-42,-809,-14,-12];
 
-    it('should count all the variations of allowed smiley faces', () => {
-        expect(Solution(happy5)).toEqual(2);
+    it('should sort the array from the highest values to the lowest, filter out duplicates, and return the greatest triplet sum', () => {
+        expect(Solution(arr5)).toEqual(-33);
     });
 });

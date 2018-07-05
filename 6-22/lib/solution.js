@@ -1,15 +1,14 @@
 'use strict';
 
-module.exports = function countSmileys(arr) {
-    arr = arr.join('');
-    let regex = /:\)|;\)|:D|;D|:~\)|;~\)|:~D|;~D|:-D|;-D|:-\)|;-\)/gi;
-    let matches = arr.match(regex);
-    
-    return (matches === null) ? 0 : matches.length;
+module.exports = function maxTriSum(numbers){
+	numbers.sort((a, b) => b - a);
+	numbers = numbers.filter((ele, index, arr) => arr.indexOf(ele) == index);
+	return numbers[0] + numbers[1] + numbers[2];
 }
 
-//Better:
+//Alternate Solution:
 
-// function countSmileys(arr) {
-//     return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
+// const maxTriSum = numbers => {
+//   const [a,b,c,...rest] = [...new Set([...numbers])].sort((a,b)=>b-a)
+//   return a+b+c
 // }
